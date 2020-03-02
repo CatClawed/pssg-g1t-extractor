@@ -1,3 +1,5 @@
+###################################################################################################
+#
 # Extracts G1T files from a PSSG.
 #
 # Only works for the following games:
@@ -11,6 +13,8 @@
 #
 # I only vaguely understand what I'm doing. Which is to say, I skip the entire beginning of the PSSG and
 # don't bother interpreting it at all, but I learned how to extract what I want.
+#
+###################################################################################################
 
 import struct
 import glob
@@ -24,7 +28,7 @@ for f in ls:
 		with open(f, mode='rb') as file:
 			filecontent = file.read()
 			index = filecontent.find(b'\x00\x00\x00\x0a\x00\x00\x00\x04')
-			# This is how I figure out where to start. The search isn't very smart and could very well find another patch of data with these exact values... I could fix that, but it worked for all four games so who cares?
+			# This is how I figure out where to start. The search isn't very smart and could very well find another patch of data with these exact values... but it worked for all four games so who cares?
 			
 			while index > -1:
 			
