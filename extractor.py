@@ -2,17 +2,8 @@
 #
 # Extracts G1T files from a PSSG.
 #
-# Only works for the following games:
-# Atelier Rorona DX, Atelier Totori DX, Atelier Meruru DX, Atelier Ayesha DX
-#
-# These games are all ports of games previously made in PhyreEngine. They maintain the PSSG format, but ditch
-# the DDS files that were previously inside in favor of Koei Tecmo's proprietary G1T texture format.
-#
-# This is a very dumb, specialized extractor; use Ego PSSG Editor for anything with DDS files inside. This
-# is frankly not designed with failure in mind.
-#
-# I only vaguely understand what I'm doing. Which is to say, I skip the entire beginning of the PSSG and
-# don't bother interpreting it at all, but I learned how to extract what I want.
+# Just reads all files in the directory, finds all PSSG files, extracts. Not a fancy tool, do not
+# use on PSSG.gz files, it will probably find them and choke.
 #
 ###################################################################################################
 
